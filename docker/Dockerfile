@@ -5,7 +5,7 @@ LABEL software.name="kallistogrch38encode44"
 LABEL software.version="0.52"
 LABEL software.description="kallisto quant against Grch38 Gencode 44"
 LABEL software.build-date=$BUILD_DATE
-
+LABEL software.vcs-ref=$VCS_RE
 
 RUN apt-get -y update && apt-get -y install wget bzip2 tar
 
