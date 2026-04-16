@@ -1,11 +1,11 @@
-FROM ubuntu:20.04
+t FROM ubuntu:20.04
 
 # Metadata
 LABEL software.name="kallistogrch38encode44"
 LABEL software.version="0.52"
 LABEL software.description="kallisto quant against Grch38 Gencode 44"
 LABEL software.build-date=$BUILD_DATE
-LABEL software.vcs-ref=$VCS_RE
+LABEL software.vcs-ref=$VCS_REF
 
 RUN apt-get -y update && apt-get -y install wget bzip2 tar
 
