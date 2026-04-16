@@ -1,4 +1,4 @@
-t FROM ubuntu:20.04
+FROM ubuntu:20.04
 
 # Metadata
 LABEL software.name="kallistogrch38encode44"
@@ -24,7 +24,7 @@ ENV PATH=$PATH:/opt
 RUN ls ./
 
 COPY kallistogrch38encode44/src/run_kallisto.sh  /
-COPY kallistogrch38encode44/ref/gencode_v44.idx /opt/index_grch38_encode44
+COPY kallistogrch38encode44/ref/gencode_v44.idx /opt/index_grch38_encode44/gencode_v44.idx
 
 ENTRYPOINT ["/bin/bash", "run_kallisto.sh"]
 
