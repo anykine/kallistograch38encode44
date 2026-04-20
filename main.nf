@@ -59,7 +59,7 @@ process KALLISTO_QUANT {
 
     script:
     """
-    run_kallisto.sh \\
+    /opt/run_kallisto.sh \\
       ${read1} \\
       ${read2} \\
       . \\
