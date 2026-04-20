@@ -62,7 +62,7 @@ process KALLISTO_QUANT {
     /opt/run_kallisto.sh \\
       ${read1} \\
       ${read2} \\
-      . \\
+      kallisto_${sample} \\
       ${task.cpus}
 
     mv abundance.tsv ${sample}_abundance.tsv
