@@ -24,6 +24,8 @@ ENV PATH=$PATH:/opt
 RUN ls ./
 
 COPY kallistogrch38encode44/src/run_kallisto.sh  /
+COPY kallistogrch38encode44/src/run_kallisto.sh  /opt/run_kallisto.sh
+RUN chmod +x /opt/run_kallisto.sh
 COPY kallistogrch38encode44/ref/gencode_v44.idx /opt/index_grch38_encode44/gencode_v44.idx
 
 ENTRYPOINT ["/bin/bash", "run_kallisto.sh"]
