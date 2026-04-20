@@ -1,0 +1,3 @@
+sample,read1,read2,threads
+DDX16-EM,home-rtwang/projects/rnaseq/human/RUNS/2017-9158/DDX16-EM/00-raw/DDX16-EM_1.fastq.gz,home-rtwang/projects/rnaseq/human/RUNS/2017-9158/DDX16-EM/00-raw/DDX16-EM_2.fastq.gz,12
+DDX2,home-rtwang/projects/rnaseq/human/RUNS/DDX2_bonneman/DDX2/00-raw/DDX2_1.fastq.gz,home-rtwang/projects/rnaseq/human/RUNS/DDX2_bonneman/DDX2/00-raw/DDX2_2.fastq.gz,6
