@@ -47,6 +47,7 @@ process KALLISTO_QUANT {
     publishDir "${params.outdir}/${sample}", mode: 'copy'
 
     container params.container
+    containerOptions '--entrypoint ""'
     cpus { threads }
 
     input:
@@ -59,15 +60,17 @@ process KALLISTO_QUANT {
 
     script:
     """
+    outdir=kallisto_${sample}
+
     /opt/run_kallisto.sh \\
       ${read1} \\
       ${read2} \\
-      kallisto_${sample} \\
+      \$outdir \\
       ${task.cpus}
 
-    mv abundance.tsv ${sample}_abundance.tsv
-    mv abundance.h5 ${sample}_abundance.h5
-    mv run_info.json ${sample}_run_info.json
+    mv \$outdir/abundance.tsv ${sample}_abundance.tsv
+    mv \$outdir/abundance.h5 ${sample}_abundance.h5
+    mv \$outdir/run_info.json ${sample}_run_info.json
     """
 
     stub:
